@@ -89,3 +89,26 @@
 // }
 // console.log(noVowels(str))
 //--->returned expected output
+
+// Create a function that takes in two arrays as arguments returns one array with no duplicate values.
+
+var arr1 = [3, 7, 10, 5, 4, 3]
+
+var arr2 = [7, 8, 2, 1, 5, 4]
+
+// Create an array called noDuplicates
+// Parameters 2 arrays
+// concat the arrays together
+// use filter to remove duplicate values
+// Expected output: [3, 7, 10, 5, 4, 8, 2, 1]
+
+const noDuplicates = (array1, array2) => {
+    let newArray = array1.concat(array2)
+    // newArray = [3, 7, 10, 5, 4, 3, 7, 8, 2, 1, 5, 4]
+    return newArray.filter((value, index) => {
+       return newArray.indexOf(value) === index;
+})
+}
+
+console.log(noDuplicates(arr1, arr2))
+
