@@ -66,28 +66,46 @@ const stringOnly = (arr) => {
 
 // - 1. Create a function that takes in a string and returns a new string with all the vowels removed.
 
-//   ```javascript
-//    var str = "javascript is awesome" 
-//    ```
+//   vowel: a,e,i,o,u
+var str = "javascript is awesome" 
 
 //   Expected output:
 //   ```javascript
 //   "jvscrpt s wsm"
 //   ```
 
+const noVowels = (str) =>{
+  let arr = str.split("")
+  let noVow = arr.filter(value => value != "a" && value !="e" && value != "i" && value != "o" && value != "u")
+  return noVow.join("")
+}
+
+//console.log(noVowels(str))
+
+
 // ---
 // - 2. Create a function that takes in two arrays as arguments returns one array with no duplicate values.
+  var arr1 = [3, 7, 10, 5, 4, 3]
 
-//   ```javascript
-//   var arr1 = [3, 7, 10, 5, 4, 3]
-
-//   var arr2 = [7, 8, 2, 1, 5, 4]
-//   ```
+  var arr2 = [7, 8, 2, 1, 5, 4]
 
 //   Expected output:
-  
-//   ```javascript 
 //   [3, 7, 10, 5, 4, 8, 2, 1]
-//   ```
+ 
+//Solution 1: use .filter() + .indexOf()
+// The filter() method creats a new array with all elements that pass the test implemented by the provided function.
+// The indexOf() method returns the first index at which a given element can be found in the array,
+// or -1 if it is not present.
 
-//   ---
+const unique = (arr1,arr2) => {
+  let combArr = arr1.concat(arr2)//[3,7,10,5,4,3,7,8,2,1,5,4]
+  const onlyUnique = (value, index, array) => {
+    return array.indexOf(value) === index// Logic comparison/no duplicated--->Ture or false.
+  }
+  let unique = combArr.filter(onlyUnique)//onlyUnique == true----->>filter that element to create a new array.
+  return unique
+}
+
+console.log(unique(arr1,arr2))
+
+//Solution 2: use .map()
