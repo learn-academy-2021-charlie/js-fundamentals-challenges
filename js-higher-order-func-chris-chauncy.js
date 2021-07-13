@@ -67,3 +67,45 @@ console.log("---------------------------------------------")
 
 console.log("Problem 4:")
 console.log("---------------------------------------------")
+
+// Create a function that takes in a string and returns a new string with all the vowels removed.
+var str = "javascript is awesome" 
+
+//function called rmvowel
+//parameter - string
+//use .filter to pass in the value
+//return a new string without the vowels
+
+const rmvowel = (string) => {
+    let array = string.split("")
+    return array.filter(value => {
+        if (!(value === "a" || value === "e" || value === "i" ||value === "o" ||value === "u")){
+            return value
+        } 
+    }).join("")
+}
+console.log(rmvowel(str))
+
+console.log("---------------------------------------------")
+
+
+console.log("Problem 4:")
+console.log("---------------------------------------------")
+
+// Create a function that takes in two arrays as arguments returns one array with no duplicate values.
+
+var arr1 = [3, 7, 10, 5, 4, 3]
+var arr2 = [7, 8, 2, 1, 5, 4]
+
+//create function called noDup
+//parameter - array
+//use .filter to pass in the value
+//return a new string with no duplicates
+
+const noDup = (arr1, arr2) => {
+    let newArr = arr1.concat(arr2) 
+    return newArr.filter((value, index) => {
+      return newArr.indexOf(value) === index 
+    }) 
+}
+console.log(noDup(arr1, arr2))
