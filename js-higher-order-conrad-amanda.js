@@ -39,3 +39,53 @@
 // }
 // console.log(oddNum(arr2))
 
+// Write a function that takes in an array of numbers and letters and returns a string with only the letters. HINT: Use typeof method
+// var comboArr = [7, "n", "i", "c", 10, "e", false, "w", 3, "o", "r", "k"]
+
+//create a function onlyLetters
+//parameters - array
+//return a string with only letters
+//PROCESS
+//use typeof and filter
+//return only letters in a new array
+//join to output string
+//expected outcome "nicework"
+
+// const onlyLetters = (array) => {
+//     let newArray = array.filter(value => {
+//         return typeof value === "string"
+//     })
+//     return newArray.join("")
+// }
+// console.log(onlyLetters(comboArr))
+
+// Create a function that takes in a string and returns a new string with all the vowels removed.
+ var str = "javascript is awesome" 
+
+//create a function noVowels
+//parameter - string
+//split string
+//use if statement that declares vowels = aeiou
+//remove vowels with filter
+//join to return new string
+// Expected output: "jvscrpt s wsm"
+
+//DID NOT WORK
+// const noVowels = (string) => {
+//     let newArray = string.split("")
+//     let newArray2 = newArray.filter(value => {
+//         return value === ['a'].includes(value) 
+//     })
+// return newArray2.join("")
+// }
+
+// console.log(noVowels(str))
+//---returned aaa
+
+// const noVowels = (string) => {
+//     let newArray = string.split("").filter(value => !['a','e','i','o','u'].includes(value)).join("");{
+//         return newArray
+//     }
+// }
+// console.log(noVowels(str))
+//--->returned expected output
