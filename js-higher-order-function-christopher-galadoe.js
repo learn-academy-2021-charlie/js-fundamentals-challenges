@@ -23,6 +23,23 @@ var comboArr = [7, "n", "i", "c", 10, "e", false, "w", 3, "o", "r", "k"]
 const letter = (array) => {
   return array.filter(value => {
     return typeof value === "string"
-  })
+  }).join("")
 }
-console.log(letter(comboArr).join(""));
+console.log(letter(comboArr));
+
+
+
+//Stretch challenges
+// declared a function called noVowels
+//parameter = string
+//.filter()
+//convert string to an array
+
+var str = "javascript is awesome"
+const noVowels = (string) => {
+  return string.split("").filter(value => {
+    return value !== "a" && value !== "e" && value !== "i" && 
+    value !== "o" && value !== "u"
+  }).join("")
+}
+console.log(noVowels(str));
