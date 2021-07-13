@@ -62,14 +62,43 @@
 
 // STRETCH Challenges
 // Create a function that takes in a string and returns a new string with all the vowels removed.
-  var str = "javascript is awesome" 
+ 
+// create function removeVowel
+//split the string 
+//use .filter 
+// using || logic return only non vowels.
+// return un voweled word.
+// var str = "javascript is awesome" 
+// const removeVowel = (array) => {
+//   let splitString = array.split("")
+//   let noVowel = splitString.filter(value => {
+//       return value !== "a" && value !== 'e' && value !== 'i' && value !== 'o' && value !== 'u'
+//   })
+//   return noVowel.join("")
+// }
+
+// console.log(removeVowel(str))
 // Expected output:
 
 // "jvscrpt s wsm"
 // Create a function that takes in two arrays as arguments returns one array with no duplicate values.
- var arr1 = [3, 7, 10, 5, 4, 3]
+// create function
+//concate arrays together
+// use .sort to put duplicates next to each other
+// use .filter to begin
 
- var arr2 = [7, 8, 2, 1, 5, 4]
-// Expected output:
+var arr1 = [3, 7, 10, 5, 4, 3]
+
+var arr2 = [7, 8, 2, 1, 5, 4]
+
+const removeDuplicates = (array1, array2) => {
+  let joinedArray = array1.concat(array2)
+  return joinedArray.filter((value, index) => joinedArray.indexOf(value) === index);
+}
+
+console.log(removeDuplicates(arr1,arr2)) 
+
+
+ // Expected output:
 
 // [3, 7, 10, 5, 4, 8, 2, 1]
