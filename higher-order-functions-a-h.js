@@ -49,16 +49,46 @@
 //   }) .join("")
 // }
 // console.log(lettersOnly(comboArr))
+
+
 // STRETCH Challenges
 // Create a function that takes in a string and returns a new string with all the vowels removed.
-//  var str = "javascript is awesome"
+var str = "javascript is awesome"
 // Expected output:
 //
 // "jvscrpt s wsm"
-// Create a function that takes in two arrays as arguments returns one array with no duplicate values.
-// var arr1 = [3, 7, 10, 5, 4, 3]
+//Create a function called noVowels with a string parameter
+//Split the string into an array with .split
+//Use .filter on the array using if and if else statements to return the value not euqal to the list of values
+// //Join into a string with .join
 //
-// var arr2 = [7, 8, 2, 1, 5, 4]
+// const noVowels = (string) => {
+//   let splitString = string.split("")
+//   return splitString.filter(value => {
+//     return value.replace(/[aeiou]/g,"")
+//     // return value !== "a"
+//   }).join("")
+// }
+// console.log(noVowels(str))
+
+// Create a function that takes in two arrays as arguments returns one array with no duplicate values.
+var arr1 = [3, 7, 10, 5, 4, 3]
+
+var arr2 = [7, 8, 2, 1, 5, 4]
 // Expected output:
 //
 // [3, 7, 10, 5, 4, 8, 2, 1]
+// Create a function called noDuplicateValues which takes an argument (array1,array2)
+// Create empty array
+// Concat array1 and array2 to make 1 array1
+// Compare each value at the index and make sure they are not equal
+// Use filter with paramenters value and index
+// .push that number into the empty array
+const noDuplicateValues = (array1,array2) => {
+  let combinedArrays = array1.concat(array2).sort()
+  combinedArrays.filter((value,index) => {
+    return combinedArrays.indexOf(value) == index
+  })
+  return combinedArrays
+}
+console.log(noDuplicateValues(arr1,arr2))
