@@ -14,7 +14,7 @@ const multiplied = (arr) => {
 
 //oneline refactor
 const timesTen = a => a.map(value => value*10)
-console.log(timesTen(arr1));
+// console.log(timesTen(arr1));
 
 // Write a function that takes in an array and returns a new array with only odd numbers
  var arr2 = [2, 7, 3, 5, 8, 10, 13]
@@ -34,7 +34,7 @@ const oddNumbers = (arr) => {
 
 // oneline refactor
 const onlyOdds = a => a.filter(v => v%2!=0 ? v : false)
-console.log(onlyOdds(arr2))
+// console.log(onlyOdds(arr2))
 
 
 // Write a function that takes in an array of numbers and letters and returns a string with only the letters. HINT: Use typeof method
@@ -48,7 +48,7 @@ var comboArr = [7, "n", "i", "c", 10, "e", false, "w", 3, "o", "r", "k"]
 
 const returnString = (arr) => {
     let answer = ""
-    arr.filter(value =>{
+    arr.map(value =>{
         if(typeof value === "string"){
             answer = answer.concat(value)
         }
@@ -56,11 +56,12 @@ const returnString = (arr) => {
     return answer
 }
 //This was an attempt at using powers beyond my comprehension. I apologize for my transgression
-// const regExAttempt = arr => arr.join('').match(/[^false][a-z]/g)
+// console.log(comboArr.join(''))
+// const regExAttempt = arr => arr.join('').match(/[^false]+[a-z]/g)
 
 // console.log(returnString(comboArr))
 
-console.log(regExAttempt(comboArr))
+// console.log(regExAttempt(comboArr))
 // STRETCH Challenges
 // Create a function that takes in a string and returns a new string with all the vowels removed.
 var str = "javascript is awesome"
@@ -76,7 +77,7 @@ var str = "javascript is awesome"
 const consonants = (str) => {
   let solution = [], vowels = ['a', 'e', 'i', 'o', 'u']
   let letters = str.split('')
-  letters.filter(value => {
+  letters.map(value => {
     if(!vowels.includes(value)){
       solution.push(value)
     }
@@ -112,4 +113,4 @@ const joinArrays = (arr1, arr2) => {
   return solution
 }
 
-console.log(joinArrays(arr1, arr2))
+// console.log(joinArrays(arr1, arr2))
