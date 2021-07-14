@@ -85,10 +85,10 @@ var arr2 = [7, 8, 2, 1, 5, 4]
 // Use filter with paramenters value and index
 // .push that number into the empty array
 const noDuplicateValues = (array1,array2) => {
-  let combinedArrays = array1.concat(array2).sort()
-  combinedArrays.filter((value,index) => {
-    return combinedArrays.indexOf(value) == index
+  return combinedArrays = array1.concat(array2).sort((a,b) => a-b)
+  combinedArrays.filter((value,index,array) => {
+    return !index || value != array[index-1]
   })
-  return combinedArrays
+  // return combinedArrays
 }
 console.log(noDuplicateValues(arr1,arr2))
