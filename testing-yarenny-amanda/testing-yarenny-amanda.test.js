@@ -7,7 +7,7 @@
 //     })
 // })
 
-
+h
 // const coffee = (boolean) => {
 // if(boolean === true){
 //     return "drink coffee"
@@ -49,8 +49,6 @@ describe("budget", () => {
         expect(budget(num2)).toEqual("not in budget")
     })
 })
-
-
 const budget = (number) => {
     if(number <= 300){
         return "in budget"
