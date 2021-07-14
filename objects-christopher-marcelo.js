@@ -17,21 +17,46 @@ person.talks = function () {
     return `${person.firstName} ${person.lastName} is from planet ${person.homePlanet}`
 }
 console.log(person.talks())
+
 // Consider this variable:
-// var product = {
-//   name: "chair", price: 14.99
-// }
+var product = {
+  name: "chair", 
+  price: 14.99
+}
 // Write a function called describeProduct takes product as an argument and logs "The product is a chair. It costs $14.99".
+
+const describeProduct = (param) => {
+  return `The product is a ${param.name}. It costs $${param.price}.`
+} 
+console.log(describeProduct(product));
+
 // Consider this variable:
-// var lunch = {
-//   name: "PB and Banana",
-//   type: "sandwich",
-//   ingredients: ["bread", "peanut butter", "banana"]
-// }
+var lunch = {
+  name: "PB and Banana",
+  type: "sandwich",
+  ingredients: ["bread", "peanut butter", "banana"]
+}
 // Write the code that accesses the ingredients property.
+console.log(lunch.ingredients);
+
 // Write the code that access the 3rd ingredient of the lunch object.
+console.log(lunch.ingredients[2]);
+
 // Write a function that takes the lunch object as an argument and returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
+const sandwich = (object) => {
+  return `The ingredients for a ${object.name} ${object.type} are ${object.ingredients}.`
+}
+console.log(sandwich(lunch));
+
 // Update the lunch object with method that returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
+// lunch.listIngredients = function () {
+//   return `The ingredients for a ${lunch.name} ${lunch.type} are ${lunch.ingredients}.`
+// }
+// console.log(lunch);
+
+lunch.listIngredients = sandwich()
+console.log(lunch);
+
 // Consider this variable:
 // var animals = [
 //   { name: "Waffles", type: "dog", age: 12 },
