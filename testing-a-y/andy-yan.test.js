@@ -76,6 +76,26 @@ const { TestWatcher } = require("jest")
 
 // Write the test for a function that takes in two arguments(numbers) and returns the smaller number.
 // Write the function that will make the test pass.
+
+describe("the isSmaller function",()=>{
+    test("takes 2 numbers and returns which is bigger",()=>{
+        expect(isSmaller(1,2)).toEqual(1)
+        expect(isSmaller(3,4)).toEqual(3)
+        expect(isSmaller(1,)).toEqual("please enter a valid input")
+    })
+})
+
+const isSmaller = (num1,num2) =>{
+    if(num1 < num2){
+        return num1
+    }else if(num1>num2){
+        return num2
+    }else{
+        return "please enter a valid input"
+    }
+}
+
+
 // Write the test for a function that takes in one argument(number) and returns whether the number is odd.
 // Write the function that will make the test pass.
 // Write the test for a function that takes in a fruit and returns "yellow" if the argument is banana, "red" if apple and "purple" if grape.
