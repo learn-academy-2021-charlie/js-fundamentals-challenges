@@ -44,3 +44,40 @@ describe("isRelaxed", () => {
     })
     
 })
+
+// Write the test for a function that returns "in budget" if a price is lower than $300.
+// Write the function that will make the test pass.
+
+const inBudget = (num) => {
+    if(num < 300){
+        return "in budget"
+    }
+}
+
+describe("inBudget", () => {
+    let price = 200
+    it("checks to see if num is within budget", () => { 
+        expect(inBudget(price)).toEqual("in budget")
+    })
+    
+})
+
+// Write the test for a function that takes in two arguments(numbers) and returns the smaller number.
+// Write the function that will make the test pass.
+
+const smallerChecker = (num1, num2) =>{
+    if (num1 < num2){
+        return num1
+    }else{
+        return num2
+    }
+}
+
+describe("smallerChecker", () => {
+    var number1 = 200
+    var number2 = 100
+    it("checks to see which number is smaller and returns the smaller number", () => { 
+        expect(smallerChecker(number1, number2)).toEqual(number2)
+    })
+    
+})
