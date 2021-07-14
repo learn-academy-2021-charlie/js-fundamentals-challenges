@@ -43,3 +43,19 @@ const noVowels = (string) => {
   }).join("")
 }
 console.log(noVowels(str));
+
+//Stretch challenge #2
+var arr1 = [3, 7, 10, 5, 4, 3]
+
+var arr2 = [7, 8, 2, 1, 5, 4]
+
+const oneArray = (array1, array2) => {
+  let newArray = []
+  let newArr = newArray.map((value, index) => {
+    if(index !==  index) {
+      newArray.push(value)
+    } 
+  }) 
+  return newArray.join("")
+}
+console.log(oneArray(arr1, arr2));
