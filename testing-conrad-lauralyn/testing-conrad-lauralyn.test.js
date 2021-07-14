@@ -83,20 +83,73 @@ const isOdd = (num) => {
         return `${num} is not odd`
     }
 }
+
 // Write the test for a function that takes in a fruit and returns "yellow" if the argument is banana, "red" if apple and "purple" if grape.
+
+describe("fruit color function", () => {
+    it("returns the color of the fruit", () => {
+        expect(fruitColor("banana")).toEqual("yellow")
+        expect(fruitColor("apple")).toEqual("red")
+        expect(fruitColor("grape")).toEqual("purple")
+    })
+})
+
 // Write the function that will make the test pass.
+const fruitColor = (fruit) => {
+    if (fruit === "banana") {
+        return "yellow"
+    } else if (fruit === "apple") {
+        return "red"
+    } else if (fruit === "grape") {
+        return "purple"
+    } else {
+        return "Enter a real fruit"
+    }
+}
+
 
 // Write the test for a function called rick that returns "Morty".
+describe("The Rick and Morty function", () => {
+    it("returns Morty", () => {
+        expect(rick()).toEqual("Morty")
+    })
+})
+
 // Write the function that will make the test pass.
+const rick = () => {
+    return "Morty"
+}
+
 
 // Write the test for a function called greeter that takes a name as an argument and returns a greeting with that name to the screen.
+describe("greeter function", () => {
+    it("returns a greeting with the given name", () => {
+        expect(greeter("Rick")).toEqual("Welcome Rick!")
+    })
+})
+
 // Write the function that will make the test pass.
+const greeter = (name) => {
+    return `Welcome ${name}!`
+}
+
 
 // Write the test for a function called oddOrEven that takes a number as an argument and logs whether the number is odd or even.
+// We did this...
+
 // Write the function that will make the test pass.
 
 // Write the test for a function called doubler that takes a number and returns the result of the number multiplied by 2.
+describe("doubler function", () => {
+    it("returns the given number multiplied by 2", () => {
+        expect(doubler(2)).toEqual(4)
+    })
+})
+
 // Write the function that will make the test pass.
+const doubler = (num) => {
+    return num * 2
+}
 
 // Write the test for a function called multiply that takes two numbers as arguments and logs the result of one of the numbers multiplied by the other.
 // Write the function that will make the test pass.
