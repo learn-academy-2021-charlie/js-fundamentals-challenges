@@ -55,30 +55,32 @@ class Latte {
 
   constructor(flavor, milktype, shots){
     this.flavor = flavor.toLowerCase()
-    this.milktype = milktype
+    this.milktype = milktype  
     this.shots = shots
   }
-  coffeeProfile(){
+  latteProfile(){
     return(`${this.flavor}: ${this.milktype()}, ${this.shots()}`)
   }
 
-  creams(){
-    if (this.cream > 1){
-      return `${this.cream} creams`
+  milktype(){
+    if (typeof this.milktype == "string"){
+      return `${this.milktype}`
     } else {
-      return `${this.cream} cream`
+      return ``
     }
   }
 
-  sugars(){
-    if (this.sugar > 1){
-      return `${this.sugar} sugars`
+  shots(){
+    if (typeof this.shots  =="number"){
+      return `${this.shots} shots`
     } else {
-      return `${this.sugar} sugar`
+      return `${this.shots}`
     }
     
     }   
 }
+var mochaLatte = new Latte ("mocha","oat milk", 3)
+console.log(mochaLatte)
 // Volume of a Cylinder
 // Write a class that calculates the volume of a Cylinder to four decimal places. Volume of a cylinder : V = πr2h (r is the radius and h is the height of the cylinder)
 
