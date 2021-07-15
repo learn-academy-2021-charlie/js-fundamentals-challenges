@@ -17,7 +17,7 @@
 //   firstName: "Arthur",
 //   lastName: "Dent",
 //   homePlanet: "Earth",
-// ]
+// }
 
 // Update the person object with a method that logs "Arthur Dent is from planet Earth".
 
@@ -45,14 +45,19 @@
 // console.log(describeProduct(product))
 
 // Consider this variable:
-// var lunch = {
-//   name: "PB and Banana",
-//   type: "sandwich",
-//   ingredients: ["bread", "peanut butter", "banana"]
-// }
+var lunch = {
+  name: "PB and Banana",
+  type: "sandwich",
+  ingredients: ["bread", "peanut butter", "banana"]
+}
 // Write the code that accesses the ingredients property.
+// console.log(lunch.ingredients)
+
 // Write the code that access the 3rd ingredient of the lunch object.
+)
+
 // Write a function that takes the lunch object as an argument and returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
+
 // Update the lunch object with method that returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
 // Consider this variable:
 // var animals = [
