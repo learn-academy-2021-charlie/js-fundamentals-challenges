@@ -33,14 +33,14 @@ class Coffee {
 
 // - Write the code that makes a black coffee.
 var blackCoffee = new Coffee("black",0,0)
-console.log(blackCoffee.coffeeProfile())
+console.log(blackCoffee.coffeeProfile())//Output:black: 0 cream, 0 sugar
 // - Write the code that makes a coffee with 1 cream and 2 sugars.
 var yanCoffee = new Coffee("yan",1,2)
-console.log(yanCoffee.coffeeProfile())
+console.log(yanCoffee.coffeeProfile())//Output:yan: 1 cream, 2 sugars
 
 // - Write the code that makes a coffee with 2 sugars. Then write the code that outputs the coffee's profile.
 var kelenCoffee = new Coffee("kelen",0,2)
-console.log(kelenCoffee.coffeeProfile())
+console.log(kelenCoffee.coffeeProfile())//Output:kelen: 0 cream, 2 sugars
 
 // 2. Latte Maker
 // - Write a Latte class that receives a flavor, a milk type and a number of shots.
@@ -68,11 +68,11 @@ class Latte{
   }
 // - Write the code that makes a regular, single shot latte. Then, log the latte's profile.
 var latte = new  Latte("regular", "regular", 1)
-console.log(latte.latteProfile())
-
-
+console.log(latte.latteProfile())//Output:regular: regular, 1 shot
 
 // - Write the code that makes a double shot hazelnut latte with almond milk. Then, log the latte's profile.
+var yanLatte = new  Latte("hazelnut", "almond milk", 2)
+console.log(yanLatte.latteProfile())//Output:hazelnut: almond milk, 2 shots
 
 // 3. Volume of a Cylinder
 
