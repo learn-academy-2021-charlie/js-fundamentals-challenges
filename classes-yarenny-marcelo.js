@@ -56,8 +56,41 @@ var latte1 = new Latte("Latte", "coconut", 1)
 console.log(latte1)
 
 // Write the code that makes a double shot hazelnut latte with almond milk. Then, log the latte's profile.
+var latte2 = new Latte('Hazelnet', 'almond', 2)
+console.log(latte2)
 
 // Volume of a Cylinder
 // Write a class that calculates the volume of a Cylinder to four decimal places. Volume of a cylinder : V = πr2h (r is the radius and h is the height of the cylinder)
 
+class Cylinder {
+  constructor(radius, height){
+    this.radius = radius
+    this.height = height
+    this.pi = Math.PI
+  }
+  cylinderVolume(){
+    return ((this.radius**2) * this.pi * this.height).toFixed(4)
+  }
+}
+console.log(Math.PI)
+
+// Making a cylinder
+var cylinder1 = new Cylinder(4, 6)
+
+console.log(cylinder1)
+let volumeCylinder1 = cylinder1.cylinderVolume()
+console.log(volumeCylinder1)
+// console.log(volumeCylinder1.toFixed(4))
+console.log(volumeCylinder1)
+// Answer! 
+// interesting!! -- to fixed converts the number to a string
+
 // Write the code that creates three unique cylinder objects
+var cylinder2 = new Cylinder(10, 100)
+var cylinder3 = new Cylinder(200, 69)
+
+console.log(cylinder2, cylinder3)
+
+let volumeCylinder2 = cylinder2.cylinderVolume()
+// console.log(volumeCylinder2.toFixed(4))
+console.log(volumeCylinder2)
