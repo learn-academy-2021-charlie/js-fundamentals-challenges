@@ -53,11 +53,11 @@ class Latte{
       this.milkType = milkType.toLowerCase()
       this.shot = shot
     }
-  
+
     latteProfile(){
         return`${this.flavor}: ${this.milkType}, ${this.shots()}`
     }
-    
+
     shots(){
       if (this.shot > 1){
         return `${this.shot} shots`
@@ -77,5 +77,21 @@ console.log(yanLatte.latteProfile())//Output:hazelnut: almond milk, 2 shots
 // 3. Volume of a Cylinder
 
 // - Write a class that calculates the volume of a Cylinder to four decimal places. Volume of a cylinder : V = πr<sup>2</sup>h (r is the radius and h is the height of the cylinder)
+//
+class Cylinder{
+  constructor(radius, height){
+    this.radius = radius
+    this.height = height
+  }
+  calculateVolume(){
+    return (Math.PI * (this.radius**2) * this.height).toFixed(4)
+  }
+}
 
 // - Write the code that creates three unique cylinder objects
+var first = new Cylinder(5, 10)
+var second = new Cylinder(1, 13)
+var third = new Cylinder(56, 83)
+console.log(first.calculateVolume())
+console.log(second.calculateVolume())
+console.log(third.calculateVolume())
