@@ -73,23 +73,23 @@ class Coffee {
 //   }
 // }
 // Write a method for your Latte class that outputs the latte's profile.
-class Latte {
-  constructor(flavor, milk, shot){
-    this.flavor = flavor
-    this.milk = milk
-    this.shot = shot
-  }
-  latteProfile(){
-    return(`${this.flavor}: ${this.milk}, ${this.shots()}`)
-  }
-  shots(){
-    if (this.shot > 1){
-      return `${this.shot} shots` 
-    } else {
-      return `${this.shot} shot`
-    }
-  }
-}
+// class Latte {
+//   constructor(flavor, milk, shot){
+//     this.flavor = flavor
+//     this.milk = milk
+//     this.shot = shot
+//   }
+//   latteProfile(){
+//     return(`${this.flavor}: ${this.milk}, ${this.shots()}`)
+//   }
+//   shots(){
+//     if (this.shot > 1){
+//       return `${this.shot} shots` 
+//     } else {
+//       return `${this.shot} shot`
+//     }
+//   }
+// }
 // Write the code that makes a regular, single shot latte. Then, log the latte's profile.
 // var singleShot = new Latte("Regular", "whole", 1)
 // console.log("Add shot:", singleShot.shots())
@@ -102,6 +102,30 @@ class Latte {
 
 // Volume of a Cylinder
 // Write a class that calculates the volume of a Cylinder to four decimal places. Volume of a cylinder : V = πr2h (r is the radius and h is the height of the cylinder)
+//create a class CylinderVolume
+  //calculate volume  to ._ _ _ _
+    // V = πr2h (r is the radius and h is the height of the cylinder)
+//input (radius, height)
+//expected output -- result of equation based on input
+  //(2, 5) ---> 62.8318
+  
+class CylinderVolume{
+  constructor(radius, height){
+    this.radius = radius
+    this.height = height
+  }
+  calculation(){
+    return this.height * Math.PI * this.radius * this.radius;
+  }
+}
+var cyl = new CylinderVolume.calculation(2,5)
+console.log(cyl)
 
 // Write the code that creates three unique cylinder objects
 
+
+///Next time we push changes
+// git add .
+// git commit
+// git pull
+// git push
