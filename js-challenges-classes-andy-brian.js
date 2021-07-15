@@ -88,3 +88,15 @@ console.log(mochaNoMilk)
 
 // Write the code that creates three unique cylinder objects
 
+class Cylinder{ 
+
+  constructor (diameter, height){ 
+     this.cylinderdiamter = diameter 
+     this.cylinderheight = height
+  }
+  const = cylinderVolume(){
+    var radius = this.cylinderdiameter
+    return(`cylinder volume is`)
+
+     }
+}
