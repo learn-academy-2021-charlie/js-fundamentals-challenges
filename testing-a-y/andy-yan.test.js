@@ -255,9 +255,9 @@ describe("The divisibleBy function",()=>{
 const divisibleBy =(num1,num2)=>{
     if(typeof num1 != "number" || typeof num2 != "number"){
         return (` please enter a number`)
-    } else if(num1/num2 % 2 === 0){
+    } else if(num1 % num2 == 0){
         return `${num1} is evenly divisible by ${num2}`
-    }else if(num1/num2 % 2 !== 0){
+    }else if(num1 % num2 != 0){
         return `${num1} is not evenly divisible by ${num2}`
     }
 }
@@ -267,3 +267,23 @@ const divisibleBy =(num1,num2)=>{
 
 // Write the function that will make the test pass
 
+
+describe("The fizzBuzz function",()=>{
+    test("takes a number and returns the result whether the first number is a multiple of 3 5 or both and outputs fizz buzz or fizzbuzz accordingly",()=>{
+        expect(divisibleBy(3)).toEqual(`fizz`)
+        expect(divisibleBy(5)).toEqual(`buzz`)
+        expect(divisibleBy(15)).toEqual(`fizzbuzz`)
+        expect(fizzBuzz("l")).toEqual(`please enter a number`)
+    })
+}) 
+const fizzBuzz = (num)=>{
+    if(typeof num !="number"){
+    return `please enter a number`
+    } else if(num % 3 == 0) {
+    return `fizz`
+    } else if(num % 5 == 0){
+    return `buzz`
+    }else if(num % 3==0 && num % 5 ==0){
+        return`fizzbuzz`
+    }
+}
