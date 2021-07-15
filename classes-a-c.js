@@ -51,10 +51,40 @@ var myLatte = new Latte("hazelnut", "skim", 10)
 console.log(myLatte.latteProfile())
 
 // Write the code that makes a regular, single shot latte. Then, log the latte's profile.
-//
+
+var singleShotLatte = new Latte("regular", "none", 1) 
+console.log(singleShotLatte.latteProfile());
+
 // Write the code that makes a double shot hazelnut latte with almond milk. Then, log the latte's profile.
-//
+
+var hazelnutLatte = new Latte("hazelnut", "almond milk", 2)
+console.log(hazelnutLatte.latteProfile);
+
 // Volume of a Cylinder
 // Write a class that calculates the volume of a Cylinder to four decimal places. Volume of a cylinder : V = πr2h (r is the radius and h is the height of the cylinder)
-
+class CylinderVolume {
+  constructor(radius, height) {
+    this.radius = radius
+    this.height = height
+  }
+  volumeChecker(){
+    return Math.PI * this.radius*2 * this.height
+  }
+  fourDecimals(){
+    return `The volume is ${this.volumeChecker().toFixed(4)}`
+  }
+}
+var cylinder = new CylinderVolume(2, 4)
+console.log(cylinder.volumeChecker());
+console.log(cylinder.fourDecimals());
 // Write the code that creates three unique cylinder objects
+
+
+var cylinder1 = new CylinderVolume(6.44, 20.55)
+var cylinder2 = new CylinderVolume(8, 200)
+var cylinder3 = new CylinderVolume(64, 274)
+
+console.log(cylinder1.fourDecimals());
+console.log(cylinder2.fourDecimals());
+console.log(cylinder3.fourDecimals());
+
