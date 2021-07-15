@@ -164,6 +164,7 @@ const rick = (str) =>{
 
 
 //8. Write the test for a function called greeter that takes a name as an argument and returns a greeting with that name to the screen.
+//Write the function that will make the test pass.
 
 describe("The greeter function",()=>{
     test("takes a string and returns greeting", () => {
@@ -179,8 +180,8 @@ const greeter = (str) =>{
         return` please enter a valid input`
     }
 }
-//9. Write the function that will make the test pass.
-// Write the test for a function called oddOrEven that takes a number as an argument and logs whether the number is odd or even.
+//9. Write the test for a function called oddOrEven that takes a number as an argument and logs whether the number is odd or even.
+// Write the function that will make the test pass.
 
 describe("The oddOrEven function",()=>{
     test("takes a number and returns whether the number is odd or even",()=>{
@@ -204,8 +205,8 @@ const oddOrEven = (num) =>{
 
 
 
-//10. Write the function that will make the test pass.
-// Write the test for a function called doubler that takes a number and returns the result of the number multiplied by 2.
+//10. Write the test for a function called doubler that takes a number and returns the result of the number multiplied by 2.
+//Write the function that will make the test pass.
 
 describe("The doubler function",()=>{
     test("takes a number and returns it multiplied by 2",()=>{
@@ -222,8 +223,9 @@ const doubler = (num)=>{
         return num*2
     }
 }
-//11. Write the function that will make the test pass.
-// Write the test for a function called multiply that takes two numbers as arguments and logs the result of one of the numbers multiplied by the other.
+//11. Write the test for a function called multiply that takes two numbers as arguments 
+//and logs the result of one of the numbers multiplied by the other.
+// Write the function that will make the test pass.
 
 describe("The multiply function",()=>{
     test("takes two number and returns the result of one multiplied by the other",()=>{
@@ -234,16 +236,16 @@ describe("The multiply function",()=>{
     })
 })
 
-const multiply =(num1,num2)=>{
+const multiply = (num1,num2) => {
     if (typeof num1!="number" || typeof num2!="number"){
         return ` please enter a number`
     }else {
         return num1*num2
     }
 }
-// Write the function that will make the test pass.
-//12. Write the test for a function called divisibleBy that takes two numbers as arguments and returns whether the first number is evenly divisible by the second so that divisibleBy(10, 5) logs "10 is evenly divisible by 5".
 
+//12. Write the test for a function called divisibleBy that takes two numbers as arguments and returns whether the first number is evenly divisible by the second so that divisibleBy(10, 5) logs "10 is evenly divisible by 5".
+// Write the function that will make the test pass.
 
 describe("The divisibleBy function",()=>{
     test("takes two number and returns the result whether the first number is divisible by the second number",()=>{
@@ -261,29 +263,28 @@ const divisibleBy =(num1,num2)=>{
         return `${num1} is not evenly divisible by ${num2}`
     }
 }
-// Write the function that will make the test pass.
-//13. Write the test for a function called fizzbuzz. If a number is a multiple of 3, replace it with the word 'fizz'. If a number is a multiple of five, replace it with the word 'buzz'. If a number is a multiple of both 3 and 5, replace it with 'fizzbuzz'.
 
-
+//13. Write the test for a function called fizzbuzz. If a number is a multiple of 3, replace it with the word 'fizz'. 
+// If a number is a multiple of five, replace it with the word 'buzz'. 
+// If a number is a multiple of both 3 and 5, replace it with 'fizzbuzz'.
 // Write the function that will make the test pass
 
-
-describe("The fizzBuzz function",()=>{
-    test("takes a number and returns the result whether the first number is a multiple of 3 5 or both and outputs fizz buzz or fizzbuzz accordingly",()=>{
-        expect(divisibleBy(3)).toEqual(`fizz`)
-        expect(divisibleBy(5)).toEqual(`buzz`)
-        expect(divisibleBy(15)).toEqual(`fizzbuzz`)
+describe("The fizzBuzz function",() => {
+    test("takes a number and returns the result with expected word",()=>{
+        expect(fizzBuzz(3)).toEqual(`fizz`)
+        expect(fizzBuzz(5)).toEqual(`buzz`)
+        expect(fizzBuzz(15)).toEqual(`fizzbuzz`)
         expect(fizzBuzz("l")).toEqual(`please enter a number`)
     })
 }) 
-const fizzBuzz = (num)=>{
+const fizzBuzz = (num) => {
     if(typeof num !="number"){
-    return `please enter a number`
-    } else if(num % 3 == 0) {
-    return `fizz`
-    } else if(num % 5 == 0){
-    return `buzz`
+        return `please enter a number`
     }else if(num % 3==0 && num % 5 ==0){
         return`fizzbuzz`
+    }else if(num % 3 == 0) {
+        return `fizz`
+    } else if(num % 5 == 0){
+        return `buzz`
     }
 }
