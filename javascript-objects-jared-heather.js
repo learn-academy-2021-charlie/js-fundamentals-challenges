@@ -1,91 +1,64 @@
 // Consider this variable:
-// var person = {
-//   firstName: "Arthur",
-//   lastName: "Dent"
-// }
+var person = {
+  firstName: "Arthur",
+  lastName: "Dent",
+  homePlanet: "Earth",
+  sentence: function(){
+    return `${this.firstName} ${this.lastName} is from planet ${this.homePlanet}`
+  }
+
+}
 // Write the code that accesses the first name of the person object.
-
-// console.log(person.firstName)
-
+console.log(person.firstName)
 // Write the code that accesses the last name of the person object.
-
-// console.log(person.lastName)
-
+console.log(person.lastName)
 // Write the code that gives the person object a property of homePlanet and set it to 'Earth'.
 
-// var person = {
-//   firstName: "Arthur",
-//   lastName: "Dent",
-//   homePlanet: "Earth",
-// ]
-
 // Update the person object with a method that logs "Arthur Dent is from planet Earth".
-
-// var person = {
-//   firstName: "Arthur",
-//   lastName: "Dent",
-//   homePlanet: "Earth",
-//   getData: function() {
-//     return `${person.firstName} ${person.lastName} is from planet ${person.homePlanet}`
-//   }
-// }
-// console.log(person.getData())
+console.log(person.sentence())
 
 // Consider this variable:
-// var product = {
-//   name: "chair", 
-//   price: 14.99
-// }
+var product = {
+  name: "chair",
+  price: 14.99,
+}
 // Write a function called describeProduct takes product as an argument and logs "The product is a chair. It costs $14.99".
 
-// const describeProduct = (string) => {
-//   return `The product is a ${product.name}. It costs ${product.price}.`
-// }
-
-// console.log(describeProduct(product))
+const describeProduct =(item) => {
+  let name = item.name
+  let price = item.price
+return `The product is a ${name}. It costs ${price}`
+}
+  console.log(describeProduct(product))
 
 // Consider this variable:
 var lunch = {
   name: "PB and Banana",
   type: "sandwich",
-  ingredients: {
-      item1:"bread", 
-      item2:"peanut butter", 
-      item3:"banana"}
+  ingredients: ["bread", "peanut butter", "banana"]
 }
 // Write the code that accesses the ingredients property.
-// console.log(lunch.ingredients)
-
+console.log(lunch.ingredients)
 // Write the code that access the 3rd ingredient of the lunch object.
-// console.log(lunch.ingredients.item3)
-
+console.log(lunch.ingredients[2])
 // Write a function that takes the lunch object as an argument and returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
-// const pB = (string) => {
-//     return `The ingredients for a ${lunch.name} ${lunch.type} are ${lunch.ingredients.item1}, ${lunch.ingredients.item2}, and ${lunch.ingredients.item3}. `
-// }
-// console.log(pB(lunch))
 
-const pB = (string) => {
-    return `The ingredients for a ${lunch.name} ${lunch.type} are ${lunch.ingredients.item1}, ${lunch.ingredients.item2}, and ${lunch.ingredients.item3}. `
+const hungry = (array) =>{
+  let name = array.name
+  let type = array.type
+  let ingredients = array.ingredients
+return `The ingredients for a ${name} ${type} are ${ingredients}.`
 }
-console.log(pB(lunch))
-
+console.log(hungry(lunch))
 // Update the lunch object with method that returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
-
-Consider this variable:
-var animals = [
-  { name: "Waffles", type: "dog", age: 12 },
-  { name: "Fluffy", type: "cat", age: 14 },
-  { name: "Spelunky", type: "dog", age: 4 },
-  { name: "Hank", type: "cat", age: 11 },
-]
+// Consider this variable:
+// var animals = [
+//   { name: "Waffles", type: "dog", age: 12 },
+//   { name: "Fluffy", type: "cat", age: 14 },
+//   { name: "Spelunky", type: "dog", age: 4 },
+//   { name: "Hank", type: "cat", age: 11 },
+// ]
 // Create a function that takes in any array of objects and returns a new array with only those of type cat.
-const onlyCats = (array) => {
-    return array.filter (value =>)
-    
-}
-
-
 // Using the same array of objects above. Create a function that returns a new array with only the names of the animals.
 // Consider this variable:
 // let author = {
@@ -100,7 +73,7 @@ const onlyCats = (array) => {
 //     species: "Charmandar",
 //     pokemon_type: "Fire"
 // }
-
+//
 // let pokeTwo = {
 //     species: "Magikarp",
 //     pokemon_type: "Water"
