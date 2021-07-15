@@ -70,7 +70,7 @@ console.log("-------------------------------------------------------")
 
 // Volume of a Cylinder
 // Write a class that calculates the volume of a Cylinder to four decimal places. Volume of a cylinder : V = πr2h (r is the radius and h is the height of the cylinder)
-class cylinder {
+class Cylinder {
   constructor(radius, height){
     this.radius = radius;
     this.height = height;
@@ -83,10 +83,11 @@ class cylinder {
 //***** why if we put a string in we get a number back */
 //*** how to check to make sure our values being passed in are the right values */
 // Write the code that creates three unique cylinder objects
-var cylinder1 = new cylinder('5', '10');
-console.log(cylinder1);
-const volume = Number(cylinder1.calculateVolume())
-console.log(volume)
+var cylinder1 = new Cylinder('5', '10');
+console.log('Cylinder 1: ' + cylinder1);
 
-var cylinder2 = new cylinder('hi', '10');
-console.log(cylinder2.calculateVolume())
+const volume = Number(cylinder1.calculateVolume())
+console.log('Volume: ' + volume)
+
+var cylinder2 = new Cylinder('hi', '10');
+console.log('Cylinder2: ' + cylinder2.calculateVolume())
