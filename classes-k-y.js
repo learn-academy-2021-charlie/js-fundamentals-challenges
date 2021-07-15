@@ -47,22 +47,22 @@ console.log(kelenCoffee.coffeeProfile())
 // - Write a method for your Latte class that outputs the latte's profile.
 
 
-class Latte {
-    constructor(flavor, milkType, shots){
+class Latte{
+    constructor(flavor, milkType, shot){
       this.flavor = flavor.toLowerCase()
       this.milkType = milkType.toLowerCase()
-      this.shots = shots
+      this.shot = shot
     }
   
     latteProfile(){
-        return(`${this.flavor}: ${this.milkType}, ${this.shots()}`)
+        return`${this.flavor}: ${this.milkType}, ${this.shots()}`
     }
     
     shots(){
-      if (this.shots > 1){
-        return `${this.shots} shots`
+      if (this.shot > 1){
+        return `${this.shot} shots`
       } else {
-        return `${this.shots} shot`
+        return `${this.shot} shot`
       }
     }
   }
