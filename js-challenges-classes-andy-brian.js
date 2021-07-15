@@ -59,14 +59,14 @@ class Latte {
     this.shots = shots
   }
   latteProfile(){
-    return(`${this.flavor}: ${this.milktype()}, ${this.shots()}`)
+    return(`${this.flavor}: ${this.milktype}, ${this.shots()}`)
   }
 
   milktype(){
     if (typeof this.milktype == "string"){
       return `${this.milktype}`
     } else {
-      return ``
+      return `none`
     }
   }
 
@@ -80,7 +80,9 @@ class Latte {
     }   
 }
 var mochaLatte = new Latte ("mocha","oat milk", 3)
+var mochaNoMilk =new Latte ("mocha","none" ,4)
 console.log(mochaLatte)
+console.log(mochaNoMilk)
 // Volume of a Cylinder
 // Write a class that calculates the volume of a Cylinder to four decimal places. Volume of a cylinder : V = πr2h (r is the radius and h is the height of the cylinder)
 
