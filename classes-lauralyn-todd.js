@@ -78,3 +78,11 @@ var cylinder2 = new Cylinder(24,12)
 var cylinder3 = new Cylinder(56, 90)
 
 console.log(cylinder2.calcVolume())
+
+
+class GoKart {
+
+  constructor() {
+     
+  }
+}
