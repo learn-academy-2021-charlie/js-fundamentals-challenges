@@ -80,7 +80,7 @@ class Latte {
     }   
 }
 var mochaLatte = new Latte ("mocha","oat milk", 3)
-var mochaNoMilk =new Latte ("mocha","none" ,4)
+var mochaNoMilk = new Latte ("mocha","none" ,4)
 console.log(mochaLatte)
 console.log(mochaNoMilk)
 // Volume of a Cylinder
@@ -91,12 +91,16 @@ console.log(mochaNoMilk)
 class Cylinder{ 
 
   constructor (diameter, height){ 
-     this.cylinderdiamter = diameter 
+     this.cylinderdiameter = diameter 
      this.cylinderheight = height
   }
-  const = cylinderVolume(){
-    var radius = this.cylinderdiameter
-    return(`cylinder volume is`)
-
-     }
+  
+  cylinderVolume = () {
+     let radius = this.cylinderdiameter / 2
+     let cylVolume = this.cylinderheight * Math.PI * radius * radius
+    return `${cylVolume}` 
+  }
 }
+ 
+var cyl1= new Cylinder(12,15)
+console.log(cyl1)
