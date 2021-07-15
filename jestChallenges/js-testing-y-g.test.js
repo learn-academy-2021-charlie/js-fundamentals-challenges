@@ -186,9 +186,31 @@ const divisibleBy = (num1, num2) => {
   return num1%num2==0 ? 'yes' : 'no'
 }
 // Write the test for a function called fizzbuzz. If a number is a multiple of 3, replace it with the word 'fizz'. If a number is a multiple of five, replace it with the word 'buzz'. If a number is a multiple of both 3 and 5, replace it with 'fizzbuzz'.
-// describe('fizzbuzz', () => {
-//   it('replaces multiples with strings', () => {
-//     expect(
-//   })
-// })
+describe('fizzbuzz', () => {
+  it('replaces multiples of 3 with fizz', () => {
+    expect(fizzbuzz([1,6,3,8,3,9,0,1])).toEqual([ 1, 'fizz', 'fizz', 8, 'fizz','fizz', 0, 1 ])
+  })
+  it('replaces multiples of 5 with buzz', () => {
+    expect(fizzbuzz([5,0,6,6,4,5,1])).toEqual(['buzz', 0, 'fizz', 'fizz', 4, 'buzz', 1])
+  })
+  it('replaces multiples of 15 with fizzbuzz', () => {
+    expect(fizzbuzz([5, 0, 3, 0, 15, 30, 5, 6])).toEqual(['buzz', 0, 'fizz', 0, 'fizzbuzz', 'fizzbuzz', 'buzz', 'fizz'])
+  })
+})
 // Write the function that will make the test pass.
+
+const fizzbuzz = (arr) => {
+  newArray = arr
+  for(let i = 0; i < newArray.length; i++){
+    if(newArray[i] != 0){
+      if(newArray[i]%3 == 0 && newArray[i]%5 == 0){
+        newArray[i] = 'fizzbuzz'
+      }else if(newArray[i]%3 == 0 && newArray[i]%5 != 0){
+        newArray[i] = 'fizz'
+      }else if(newArray[i]%3 !=0 && newArray[i]%5 == 0){
+        newArray[i] = 'buzz'
+      }
+    }
+  }
+  return newArray
+}
