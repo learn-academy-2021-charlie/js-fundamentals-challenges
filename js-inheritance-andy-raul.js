@@ -59,18 +59,31 @@ class Car{
     this.carMake = make
     this.carYear = year
     this.wheels = 4
-    this.lightsAreOn = true
+    this.lights = false
+    this.carSpeed = 0
+    this.turnSignal = "off"
     }
     howManyWheels(){
         return `This car has ${this.wheels} wheels`
     }
-    lightsOn (){
-        if (this.lightsAreOn = false){
+    lightSwitch (){
+        if (this.lights == true){
+            this.lights =false
             return `Car lights are ON`
         }else {
             return `Lights are OFF`
         }
     }
+    turnSignalSelector (){
+        if(this.turnSignal =="off"){
+            return `turn signal is off`
+        }else if(this.turnSignal == "left"){
+            return `left indicator on`
+        }else if(this.turnSignal =="right"){
+        return `right indicator on`
+        }
+    }
+
 }
 
 class Tesla extends Car{
@@ -78,24 +91,52 @@ class Tesla extends Car{
     super(make, year)
     this.Model = model
     }
+    accelerate(){
+        if(this.carSpeed >= 0)
+        return `Vehicle speed is ${this.carSpeed + 10}`
+    }
+    brake(){
+        if(this,carSpeed =>0)
+        return `Vehicle speed is${this.carSpeed -7}`
+    }
 }
 class Toyota extends Car{
     constructor(make, year, model){
     super(make, year)
     this.Model = model
+    this.lights = true
+    }
+    accelerate(){
+        if(this.carSpeed >= 0)
+        return `Vehicle speed is ${this.carSpeed + 5}`
+    }
+    brake(){
+        if(this,carSpeed =>0)
+        return `Vehicle speed is${this.carSpeed -2}`
     }
 }
 class Volkswagen extends Car{
     constructor(make, year, model){
     super(make, year)
     this.Model = model
+    this.lights = false
+    }
+    accelerate(){
+        if(this.carSpeed >= 0)
+        return `Vehicle speed is ${this.carSpeed + 7}`
+    }
+    brake(){
+        if(this,carSpeed =>0)
+        return `Vehicle speed is${this.carSpeed -5}`
     }
 }
 var myVolkswagen = new Volkswagen ("Volkswagen", 2022, "Golf")
 var myToyota = new Toyota ("Toyota", 1975, "Corolla")
 var myTesla = new Tesla("Tesla",2020, "Model S",)
-var myCar = new Car("ford", 1992, false)
-console.log(myTesla.lightsOn())
-// console.log(myToyota)
-// console.log(myVolkswagen)
+var myCar = new Car("ford", 1992)
 
+var myVolkswagenOff = new Volkswagen ("Volkswagen", 2022, "Golf",4,true)
+
+console.log(myVolkswagenOff.lightSwitch())
+console.log(myToyota.accelerate())
+console.log(myToyota.accelerate())
