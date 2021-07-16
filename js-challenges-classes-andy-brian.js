@@ -95,7 +95,7 @@ class Cylinder{
      this.cylinderheight = height
   }
   
-  cylinderVolume = () {
+  cylinderVolume() {
      let radius = this.cylinderdiameter / 2
      let cylVolume = this.cylinderheight * Math.PI * radius * radius
     return `${cylVolume}` 
@@ -103,4 +103,4 @@ class Cylinder{
 }
  
 var cyl1= new Cylinder(12,15)
-console.log(cyl1)
+console.log(cyl1.cylinderVolume())
