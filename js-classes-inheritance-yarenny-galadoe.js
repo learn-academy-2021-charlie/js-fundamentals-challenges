@@ -18,7 +18,7 @@ class Tesla extends Car{
     }
 }
 
-var myTesla = new Tesla
+var myTesla = new Tesl
 // console.log(myTesla)
 
 class Toyota extends Car{
