@@ -65,22 +65,46 @@ console.log("Tesla year: " , myTesla.year)//Test--->Tesla year:  2020
 // 7. **Story**:	As a programmer, I can make a Toyota car.
 // - class Toyota inherits from class Car
 // - create an object called myToyota which is a instance of class Toyota
+class Toyota extends Car{
+    constructor(){
+        super()
+    }
+}
+var myToyota = new Toyota()
+console.log(myToyota)
 
 // 8. **Story**: As a programmer, I can give my Toyota a model on initialization.
 // - The model can be inherited from the parent class Car by passing the model through the constructor() and super() on the child class
+myToyota.model = "2021 Toyota camry trn"
+console.log("Toyota model: " , myToyota.model)
 
 // 9. **Story**: As a programmer, I can give my Toyota a year on initialization.
 // - The year can be inherited from the parent class Car by passing the year through the constructor() and super() on the child class
+myToyota.model = "2020 camry xse"
+console.log("Toyota model: " , myToyota.model)
+
 
 // 10. **Story**:	As a programmer, I can make a Volkswagen car.
 // - class Volkswagen inherits from class Car
 // - create an object called myVolkswagen which is a instance of class Volkswagen
+class Volkswagen extends Car{
+    constructor(){
+        super()
+    }
+}
+var myVolkswagen = new Volkswagen()
+console.log(myVolkswagen)
+
 
 // 11. **Story**: As a programmer, I can give my Volkswagen a model on initialization.
 // - The model can be inherited from the parent class Car by passing the model through the constructor() and super() on the child class
+myVolkswagen.model = "2022 Volkswagen taos se"
+console.log("Volkswagen model: " , myVolkswagen.model)
 
 // 12. **Story**: As a programmer, I can give my Volkswagen a year on initialization.
 // - The year can be inherited from the parent class Car by passing the year through the constructor() and super() on the child class
+myVolkswagen.year = "2020"
+console.log("Volkswagen year: " , myVolkswagen.year)
 
 // 13. **Story**: As a programmer, I can give all my cars a lights property. Lights start in the off position.
 
