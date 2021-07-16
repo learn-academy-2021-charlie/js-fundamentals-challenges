@@ -4,9 +4,21 @@ class Car{
     constructor(){
         this.model = "generic car"
         this.year = "myCar year"
+        this.light = false
+        this.turnSignal = false
+        this.speed = 0
+        this.break = 0
     }
     wheels(){
         return 4
+    }
+    light(){
+      if(this.light == false){
+        this.light = true
+        return "light on"
+      }else{
+        return "light off"
+      }
     }
 }
 
@@ -16,10 +28,22 @@ class Tesla extends Car{
         this.model = "Y"
         this.year = "2021"
     }
+    accel(){
+        return this.speed += 10
+    }
+    break(){
+      return this.break -= 7
+    }
 }
 
-var myTesla = new Tesl
-// console.log(myTesla)
+var myTesla = new Tesla()
+myTesla.accel()
+myTesla.accel()
+myTesla.break()
+console.log(myTesla);
+
+// myTesla.speed()
+// console.log("speed: ", myTesla.speed);
 
 class Toyota extends Car{
     constructor(){
@@ -27,10 +51,20 @@ class Toyota extends Car{
         this.model = "tacoma"
         this.year = "2020"
     }
+    accel(){
+        return this.speed += 5
+    }
+    break(){
+      return this.break -= 2
+    }
 }
 
-var myToyota = new Toyota
-// console.log(myToyota)
+var myToyota = new Toyota()
+myToyota.accel()
+myToyota.accel()
+myToyota.accel()
+myToyota.break()
+console.log(myToyota)
 
 class Volkswagen extends Car{
     constructor(){
