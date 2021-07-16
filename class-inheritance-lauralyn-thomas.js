@@ -33,26 +33,36 @@ class Car {
 
     switchLights() {
         this.lightsOn = !this.lightsOn
+        return this.lightsInfo()
+    }
+
+    lightsInfo() {
         if (this.lightsOn) {
             return `Lights are on!`
         } else {
             return `Lights are off!`
         }
-        
     }
 
     switchSignals(){
         this.signalOn = !this.signalOn
+        return this.signalInfo()
+    }
+
+    signalInfo() {
         if(this.signalOn) {
             return `Signals is on!`
         } else {
             return `Signals are off!`
         }
-        
+    }
+
+    speedInfo() {
+        return `the speed is at ${this.speed}mph`
     }
 
     carInfo(){
-        return `The car is a ${this.year} ${this.model}, it has ${this.getWheels()} wheels, the ${this.switchLights()}. The ${this.switchSignals()}, and is currently ${this.speedUp()}`
+        return `The car is a ${this.year} ${this.model}, it has ${this.getWheels()} wheels, the ${this.lightsInfo()}. The ${this.signalInfo()}, and is currently ${this.speedUp()}`
     }
 
     
@@ -83,12 +93,12 @@ class Tesla extends Car {
     }
     speedUp(){
          this.speed += 10
-         return `the speed is at ${this.speed}mph`
+         return this.speedInfo()
     }
 
     braking(){
         this.speed -= 7
-        return `the speed is at ${this.speed}mph`
+        return this.speedInfo()
     }
 
 }
@@ -96,7 +106,10 @@ class Tesla extends Car {
 var teslaTest = new Tesla("Model S", 2021)
 console.log(`Tesla:`,teslaTest.speedUp())
 console.log(`braking:`, teslaTest.braking() )
-console.log(`tester:`,teslaTest.carInfo())
+// console.log(`tester:`,teslaTest.carInfo())
+// teslaTest.switchLights()
+// console.log(`tester:`,teslaTest.carInfo())
+
 
 // Story: As a programmer, I can make a Toyota car.
 // class Toyota inherits from class Car
@@ -115,13 +128,13 @@ class Toyota extends Car {
     }
     speedUp(){
         this.speed += 5
-        return `the speed is at ${this.speed}mph`
+        return this.speedInfo()
    }
 
-   braking(){
-    this.speed -= 2
-    return `the speed is at ${this.speed}mph`
-}
+    braking(){
+        this.speed -= 2
+        return this.speedInfo()
+    }
 }
 
 var toyotaTest = new Toyota("superspeeder", 1993 )
@@ -148,12 +161,13 @@ class Volkswagen extends Car {
 
     speedUp(){
         this.speed += 7
-        return `the speed is at ${this.speed}mph`
-   }
-   braking(){
-    this.speed -= 5
-    return `the speed is at ${this.speed}mph`
-}
+        return this.speedInfo()
+    }
+    
+    braking(){
+        this.speed -= 5
+        return this.speedInfo()
+    }
 }
 var volkswagenTest = new Volkswagen("buggy", 1994 )
 console.log(`Volkswagen:`,volkswagenTest.speedUp())
