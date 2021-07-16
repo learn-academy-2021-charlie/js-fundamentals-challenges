@@ -42,7 +42,7 @@
 //
 // Latte Maker
 
-// Write a Latte class that receives a flavor, a milk type and a number of shots.
+Write a Latte class that receives a flavor, a milk type and a number of shots.
 
 class Latte {
   constructor (flavor, milkType, shots) {
@@ -51,7 +51,7 @@ class Latte {
     this.shots = shots
   }
   latteProfile () {
-    return (`${this.flavor}: ${this.milkType}: ${this.shots}`)
+    return (`${this.flavor}: ${this.milkType()}: ${this.shots()}`)
   }
 }
 var regularLatte = new Latte ("latte", 0, 1)
