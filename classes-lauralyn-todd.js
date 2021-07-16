@@ -82,7 +82,14 @@ console.log(cylinder2.calcVolume())
 
 class GoKart {
 
-  constructor() {
-     
+  constructor(number, position, color, driversName) {
+     this.goKartNumber = number
+     this.position = position
+     this.color = color
+     this.driversName = driversName
+  }
+
+  isBrakeOn(){
+    return this.brake
   }
 }
