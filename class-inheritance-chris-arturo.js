@@ -57,6 +57,8 @@ class Car {
   this.year = "my car year"
   this.wheels = 4
   this.lights = false
+  this.signal = "off"
+  this.speed = 0
 }
     lightSwitch(){
       if (this.lights == false){
@@ -65,16 +67,31 @@ class Car {
       } else if (this.lights == true) {
         this.lights = false
           return "Lights are off"
-        }
+      }}
+    turnSignals(direction){
+      if (direction == "right") {
+        this.signal = "right signal on"
+        return "right signal turned on"
+      }
+      else if (direction == "left") {
+        this.signal = "left signal on"
+        return "left signal turned on"
     }
-    turnSignals()
+      else return "please type left or right"
+}
+    accelerate(number){
+      this.speed = this.speed + number
+    }
+    deaccelerate(number){
+      this.speed = this.speed - number
+    }
 }
 class Tesla extends Car {
   constructor(year,model){
     super()
     this.year = year
     this.model = model
-    } 
+    }
   }
 class Toyota extends Car {
   constructor(year,model){
@@ -92,3 +109,13 @@ var checkCar = new Car()
 // console.log(checkCar)
 var myToyota = new Toyota(2001,"corolla")
 
+// myToyota.lightSwitch()
+// console.log(myToyota.lightSwitch())
+
+// myToyota.turnSignals("right")
+// console.log(myToyota)
+// myToyota.turnSignals("left")
+// console.log(myToyota)
+console.log(myToyota)
+myToyota.accelerate(10)
+console.log(myToyota)
