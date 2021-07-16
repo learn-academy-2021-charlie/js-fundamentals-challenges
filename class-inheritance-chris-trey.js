@@ -10,8 +10,44 @@ class Car {
         this.speed = 0
     }
     carInfo(){
-        return `your car information is as follows. you are driving a ${this.model} model year ${this.year} it has ${this.wheels} wheels your turn signals are ${this.turnSignal} your car lights are ${this.carLights} and you speed is ${this.speed}`
+        return `your car information is as follows. you are driving a ${this.model} model year ${this.year} it has ${this.wheelCount} wheels your turn signals are ${this.turnSignal} your car lights are ${this.carLights} and your speed is ${this.speed}`
     }
+    headlights(){
+        if(this.carLights === "off") {
+            return this.carLights = "on"
+        } else {
+            return this.carLights = "off"
+        }
+    }
+    turnSignals(){
+        if(this.turnSignal === "off") {
+            return this.turnSignal = "on"
+        } else {
+            return this.turnSignal = "off"
+        }
+    }
+    acceleration(){ //check for capitalization
+        if(this.model === "tesla"){
+            return this.speed + 10
+        } else if(this.model === "toyota") {
+            return this.speed + 5
+        } else if(this.model === "volkswagen") {
+            return this.speed + 7
+        } else {
+
+        }
+    }
+    braking(){ //check for capitalization
+        if(this.model === "tesla" && this.speed > 0){
+            return this.speed - 7//create nested if statement to handle when speeds are below acceleration rate
+        } else if(this.model === "toyota") {
+            return this.speed - 2
+        } else if(this.model === "volkswagen") {
+            return this.speed -5
+        } else {
+            return "Error: Please use correct model(tesla, toyota, volkwagen)"
+        }
+    } 
 }
 // Story: As a programmer, I can give my car a model on initialization.
 // The model for the car class can be "generic car"
@@ -28,7 +64,7 @@ class Car {
 class MyTesla extends Car {
     constructor(year){
         super(year)
-        
+        this.model = "tesla"
     }
 }
 // Story: As a programmer, I can give my Tesla a model on initialization.
@@ -40,6 +76,12 @@ class MyTesla extends Car {
 // Story: As a programmer, I can make a Toyota car.
 // class Toyota inherits from class Car
 // create an object called myToyota which is a instance of class Toyota
+class myToyota extends Car {
+    constructor(year){
+        super(year)
+        this.model = "toyota"
+    }
+}
 
 // Story: As a programmer, I can give my Toyota a model on initialization.
 // The model can be inherited from the parent class Car by passing the model through the constructor() and super() on the child class
@@ -50,6 +92,16 @@ class MyTesla extends Car {
 // Story: As a programmer, I can make a Volkswagen car.
 // class Volkswagen inherits from class Car
 // create an object called myVolkswagen which is a instance of class Volkswagen
+class myVolkswagen extends Car {
+    constructor(year){
+        super(year)
+        this.model = "generic volkswagen"
+    }
+}
+
+var myCar = new MyTesla(2021)
+myCar.acceleration()
+console.log(myCar.carInfo());
 
 // Story: As a programmer, I can give my Volkswagen a model on initialization.
 // The model can be inherited from the parent class Car by passing the model through the constructor() and super() on the child class
