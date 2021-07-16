@@ -58,13 +58,17 @@ class Car{
     constructor(make, year){
     this.carMake = make
     this.carYear = year
-    this.isACar = true
+    this.wheels = 4
+    this.lightsAreOn = true
     }
     howManyWheels(){
-        if(this.isACar == true){
-        return `Has 4 wheels`}
-        else {
-            return(`please come back in a car`)
+        return `This car has ${this.wheels} wheels`
+    }
+    lightsOn (){
+        if (this.lightsAreOn = false){
+            return `Car lights are ON`
+        }else {
+            return `Lights are OFF`
         }
     }
 }
@@ -75,7 +79,23 @@ class Tesla extends Car{
     this.Model = model
     }
 }
-
-var myTesla = new Tesla("Tesla",2020, "Model S")
+class Toyota extends Car{
+    constructor(make, year, model){
+    super(make, year)
+    this.Model = model
+    }
+}
+class Volkswagen extends Car{
+    constructor(make, year, model){
+    super(make, year)
+    this.Model = model
+    }
+}
+var myVolkswagen = new Volkswagen ("Volkswagen", 2022, "Golf")
+var myToyota = new Toyota ("Toyota", 1975, "Corolla")
+var myTesla = new Tesla("Tesla",2020, "Model S",)
 var myCar = new Car("ford", 1992, false)
-console.log(myTesla)
+console.log(myTesla.lightsOn())
+// console.log(myToyota)
+// console.log(myVolkswagen)
+
