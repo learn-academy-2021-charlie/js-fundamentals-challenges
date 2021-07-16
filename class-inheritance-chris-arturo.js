@@ -56,13 +56,26 @@ class Car {
   this.model = "generic car"
   this.year = "my car year"
   this.wheels = 4
-}}
+  this.lights = false
+}
+    lightSwitch(){
+      if (this.lights == false){
+          this.lights = true
+          return "Lights are on"
+      } else if (this.lights == true) {
+        this.lights = false
+          return "Lights are off"
+        }
+    }
+    turnSignals()
+}
 class Tesla extends Car {
   constructor(year,model){
     super()
     this.year = year
     this.model = model
-}}
+    } 
+  }
 class Toyota extends Car {
   constructor(year,model){
     super()
@@ -76,6 +89,6 @@ class Volkswagen extends Car {
     this.model = model
 }}
 var checkCar = new Car()
-console.log(checkCar)
+// console.log(checkCar)
 var myToyota = new Toyota(2001,"corolla")
-console.log(myToyota)
+
